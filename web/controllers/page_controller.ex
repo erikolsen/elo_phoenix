@@ -8,6 +8,7 @@ defmodule EloPhoenix.PageController do
 
   def calculate(conn, %{"ratings" => %{"winner_rating" => winner_rating, "loser_rating" => loser_rating}}) do
     json conn, %{rating_change: EloEx.EloCalculator.rating_change(String.to_integer(winner_rating), String.to_integer(loser_rating)) }
+  end
 
   def show(conn, _params) do
     render conn, "calculate.html"

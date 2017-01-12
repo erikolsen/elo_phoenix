@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
 </div>
-<%= form_for @conn, page_path(@conn, :calculate), [name: :ratings, class: :ratingForm], fn f -> %>
+<%= form_for @conn, page_path(@conn, :calculate), [as: :ratings, class: :ratingForm], fn f -> %>
   Winner Rating:<br>
   <%= text_input f, :winner_rating %></br>
   Loser Rating:<br>

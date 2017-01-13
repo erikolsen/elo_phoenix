@@ -17,7 +17,7 @@ defmodule EloPhoenix.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    post "/calcluate", PageController, :calculate
+    post "/calculate", PageController, :calculate
     get "/calculate", PageController, :show
   end
 
